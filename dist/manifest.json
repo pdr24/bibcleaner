@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "BibCleaner",
+  "version": "1.0.0",
+  "description": "Verify and clean one BibTeX entry at a time. Every change needs your approval. No accounts, no analytics, no server.",
+  "action": {
+    "default_title": "BibCleaner",
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api.crossref.org/*",
+    "https://api.datacite.org/*",
+    "https://dblp.org/*",
+    "https://api.openalex.org/*",
+    "https://export.arxiv.org/*",
+    "https://doi.org/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; connect-src 'self' https: http:"
+  },
+  "minimum_chrome_version": "116"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "_template": true,
+    "id": "example-acm-conference-1",
+    "category": "ACM conference",
+    "bib": "@inproceedings{key,\n  title={Paste the citation exactly as you found it},\n  author={Last, First},\n  year={2024}\n}",
+    "truth": {
+      "doi": "10.xxxx/replace-with-the-verified-doi",
+      "title": "Exact title from the publisher page",
+      "year": 2024,
+      "venue": "Full proceedings or journal name",
+      "pages": "1--10",
+      "ambiguous": false
+    },
+    "notes": "How you verified it, e.g. 'checked on publisher page and doi.org, 2026-09-22'."
+  }
+]
